@@ -303,7 +303,7 @@ nav ul li a:hover {
 /* Contact Section */
 .contact {
     padding: 100px 0;
-    background: linear-gradient(rgba(139, 92, 246, 0.7), rgba(49, 46, 129, 0.7)), url('assets/bg_contact.jpg') no-repeat center center/cover;
+    background: url('assets/bg_contact.jpg') no-repeat center center/cover;
 }
 
 form {
