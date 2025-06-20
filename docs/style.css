@@ -1,14 +1,14 @@
 /* Base Styles */
 :root {
-    --primary-color: #2563eb;  /* Professional blue */
-    --primary-dark: #1e40af;
-    --secondary-color: #1e293b;  /* Dark slate */
-    --accent-color: #f59e0b;  /* Gold accent */
-    --light-color: #f8fafc;
-    --gray-color: #94a3b8;
-    --dark-gray: #475569;
-    --white: #ffffff;
-    --black: #0f172a;
+    --primary-color: #8b5cf6;  /* Purple */
+    --primary-dark: #6d28d9;   /* Deep purple */
+    --secondary-color: #312e81;  /* Dark purple/gray */
+    --accent-color: #f472b6;   /* Pink accent */
+    --light-color: #f4f3ff;    /* Very light gray */
+    --gray-color: #a1a1aa;     /* Medium gray */
+    --dark-gray: #4b5563;      /* Darker gray */
+    --white: #ffffff;          /* White */
+    --black: #18181b;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -141,10 +141,17 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: url('assets/bg_hero4.jpg') no-repeat center center;
     color: var(--white);
-    padding: 180px 0 100px;
-    text-align: center;
+    padding: 240px 0 100px;
+    /* text-align: center; */
+}
+
+.hero-content {
+    text-align: left;
+    max-width: 600px;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .hero h2 {
@@ -161,7 +168,7 @@ nav ul li a:hover {
 /* Services Section */
 .services {
     padding: 100px 0;
-    background-color: var(--light-color);
+    background: url('assets/bg_services.jpg') no-repeat center center/cover;
 }
 
 .services-grid {
@@ -233,7 +240,7 @@ nav ul li a:hover {
 /* Work Section */
 .work {
     padding: 100px 0;
-    background-color: var(--light-color);
+    background: linear-gradient(rgba(183, 183, 183, 0.5), rgba(0, 0, 0, 0.5)), url('assets/bg_ourwork.jpg') no-repeat center center/cover;
 }
 
 .work-grid {
@@ -273,6 +280,7 @@ nav ul li a:hover {
 /* Contact Section */
 .contact {
     padding: 100px 0;
+    background: linear-gradient(rgba(139, 92, 246, 0.7), rgba(49, 46, 129, 0.7)), url('assets/bg_contact.jpg') no-repeat center center/cover;
 }
 
 form {
