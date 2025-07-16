@@ -15,14 +15,31 @@
                 <span>Digital Marketing</span>
             </div>
             <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <a href="login.html" class="btn join-now-btn">Join Now</a>
-            </nav>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- Join Now button (visible only if not logged in) -->
+  <div id="auth-links">
+    <a href="login.html" class="btn join-now-btn">Join Now</a>
+  </div>
+
+  <!-- User Menu (visible only if logged in) -->
+  <div id="user-menu" class="user-menu hidden">
+    <div class="user-avatar" id="avatar-toggle">
+      <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" alt="User Icon" />
+      <span id="nav-user-name">User</span>
+    </div>
+    <ul class="dropdown" id="user-dropdown">
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li id="logout-nav">Logout</li>
+    </ul>
+  </div>
+</nav>
+
         </div>
     </header>
 
@@ -161,5 +178,33 @@
             </div>
         </div>
     </footer>
+    <script>
+const user = JSON.parse(localStorage.getItem('nexus-user'));
+
+if (user) {
+  document.getElementById('auth-links')?.classList.add('hidden');
+  const userMenu = document.getElementById('user-menu');
+  const dropdown = document.getElementById('user-dropdown');
+  const avatarToggle = document.getElementById('avatar-toggle');
+
+  userMenu.classList.remove('hidden');
+  document.getElementById('nav-user-name').textContent = user.name.split(" ")[0];
+
+  avatarToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.toggle('active');
+  });
+
+  document.getElementById('logout-nav').addEventListener('click', () => {
+    localStorage.removeItem('nexus-user');
+    window.location.href = 'login.html';
+  });
+
+  document.addEventListener('click', () => {
+    dropdown.classList.remove('active');
+  });
+}
+</script>
+
 </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="avatar">
+        <img src="https://cdn-icons-png.flaticon.com/512/9131/9131529.png" alt="User" />
+        <h3 id="sidebar-name">User</h3>
+        <p id="sidebar-email">user@email.com</p>
+      </div>
+      <button id="home-btn">🏠 Home</button>
+      <button id="logout-btn">🚪 Logout</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard">
+      <header>
+        <h1>Hello, <span id="user-name">User</span> 👋</h1>
+        <p>Welcome to your personalized dashboard.</p>
+      </header>
+
+      <section class="stats">
+        <div class="card">
+          <h3>Active Services</h3>
+          <p>3</p>
+        </div>
+        <div class="card">
+          <h3>Subscription Plan</h3>
+          <p>Pro+</p>
+        </div>
+        <div class="card">
+          <h3>Messages</h3>
+          <p>12</p>
+        </div>
+        <div class="card">
+          <h3>Last Login</h3>
+          <p>July 15, 2025</p>
+        </div>
+        <div class="card">
+          <h3>Last Order</h3>
+          <p>SEO Booster - ₹2,999</p>
+        </div>
+        <div class="card">
+          <h3>Account Status</h3>
+          <p style="color: green;">Active</p>
+        </div>
+      </section>
+
+      <section class="profile-section">
+        <h2>Profile Information</h2>
+        <div class="profile-info">
+          <p><strong>Name:</strong> <span id="profile-name"></span></p>
+          <p><strong>Email:</strong> <span id="profile-email"></span></p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

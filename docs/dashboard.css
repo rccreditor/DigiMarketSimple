@@ -1,0 +1,116 @@
+:root {
+  --primary: #8b5cf6;
+  --primary-dark: #6d28d9;
+  --bg: #f3f4f6;
+  --text: #1f2937;
+  --white: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.dashboard-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--primary-dark);
+  color: white;
+  width: 250px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+.sidebar h3 {
+  margin: 10px 0 4px;
+}
+
+.sidebar p {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.sidebar button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+  background-color: #ddd6fe;
+}
+
+/* Main Dashboard */
+.dashboard {
+  flex: 1;
+  padding: 40px;
+  background: var(--bg);
+}
+
+.dashboard header h1 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.2rem;
+}
+
+.stats {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 30px;
+}
+
+.card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--primary);
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.profile-section {
+  margin-top: 40px;
+}
+
+.profile-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}

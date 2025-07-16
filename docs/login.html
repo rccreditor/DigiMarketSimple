@@ -78,7 +78,7 @@ document.querySelector('.auth-form').addEventListener('submit', async (e) => {
   if (res.ok) {
     alert('Login successful');
     localStorage.setItem('nexus-user', JSON.stringify(data.user));
-    window.location.href = 'index.html';
+    window.location.href = 'dashboard.html';
   } else {
     alert(data.message || 'Login failed');
   }
