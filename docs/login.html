@@ -63,15 +63,27 @@
     </div>
     
     <script>
-        // Toggle password visibility
-        document.querySelectorAll('.toggle-password').forEach(icon => {
-            icon.addEventListener('click', function() {
-                const passwordInput = this.previousElementSibling;
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                this.classList.toggle('fa-eye-slash');
-            });
-        });
-    </script>
+document.querySelector('.auth-form').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  const res = await fetch('http://localhost:5000/api/auth/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password })
+  });
+
+  const data = await res.json();
+  if (res.ok) {
+    alert('Login successful');
+    localStorage.setItem('nexus-user', JSON.stringify(data.user));
+    window.location.href = 'index.html';
+  } else {
+    alert(data.message || 'Login failed');
+  }
+});
+</script>
+
 </body>
 </html>
